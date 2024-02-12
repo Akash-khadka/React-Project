@@ -27,7 +27,18 @@ return <div className="px-lg flex items-center h-full">
     <TextInput placeholder="Email" label="Email" {...form.getInputProps('email')}  />
     <PasswordInput placeholder="Password" label="Password" mt="sm" required {...form.getInputProps('password')} />
     </div>
-    <Button fullWidth variant="outline" color="rgba(0, 0, 0, 1)">Sign up</Button>
+    <Button  className="my-xl" fullWidth variant="filled" color="orange">Sign up</Button>
+
+    <div className="text-sm flex justify-center font-semibold">Signup with</div>
+    <span className="flex">
+      <div className="w-1/2 flex justify-end mx-sm"> Google</div>
+      <div className="w-1/2 mx-sm"> Facebook</div>
+    </span>
+
+    <div className="flex justify-center py-sm text-sm font-bold">
+      Dont have an account?
+      <span className="text-orange-500">Signup</span>
+    </div>
 </form>
 </div>
 }

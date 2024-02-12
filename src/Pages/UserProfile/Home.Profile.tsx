@@ -1,11 +1,11 @@
 import { ProfileNav } from "../../Components/partials/ProfileNav"
+import { DashboardAppShell } from "../../Components/partials/Profile.Appshell"
 
-export const ProfileHome=()=>{
+export const DashboardPage=()=>{
 
     return <>
-    <ProfileNav/>
+    <DashboardAppShell/>
     <section>
-
     </section>
     </>
 }

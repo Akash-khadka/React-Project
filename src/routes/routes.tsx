@@ -1,7 +1,8 @@
 import { AuthLayout } from "../Layout/Auth.layout"
 import { LandingLayout } from "../Layout/Landing.layout"
-import { ProfileHome } from "../Pages/UserProfile/Home.Profile"
+import { DashboardPage } from "../Pages/UserProfile/Home.Profile"
 import { IRoute } from "./Route.interface"
+import { DashboardHomePage } from "../Pages/Dashboard/Home.Page"
 
 export const APP_ROUTES: IRoute[]=[
 
@@ -14,7 +15,7 @@ export const APP_ROUTES: IRoute[]=[
         element: <AuthLayout/>
     },
     {
-        path:"/profile",
-        element: <ProfileHome/>
+        path:"/dashboard/*",
+        element: <DashboardPage/>
     }
 ]

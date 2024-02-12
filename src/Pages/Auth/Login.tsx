@@ -1,5 +1,6 @@
 import { Button, TextInput, PasswordInput } from "@mantine/core"
 import {useForm} from '@mantine/form';
+import { NavLink } from "react-router-dom";
 
 
 export const LoginPage=()=>{
@@ -21,12 +22,25 @@ export const LoginPage=()=>{
 
 return  <div className="px-lg flex items-center h-full">
 <form className="w-full" onSubmit={form.onSubmit((values)=> submitForm())}>
-    <div className="text-3xl mb-xl font-bold">Login</div>
+    <div className="text-3xl font-bold">Login</div>
     <div className="">
-    <TextInput placeholder="Enter your email" label="Email" {...form.getInputProps('email')}  />
-    <PasswordInput placeholder="Enter your password" label="Password" mt="sm" required {...form.getInputProps('password')} />
+    <TextInput className="my-xs" placeholder="Email" label="" {...form.getInputProps('email')}  />
+    <span className="text-sm flex font-bold justify-end">Forgot Password?</span>
+    <PasswordInput placeholder="Password" label="" mt="sm" required {...form.getInputProps('password')} />
     </div>
-    <Button fullWidth variant="outline" color="rgba(0, 0, 0, 1)">Log in</Button>
+    <Button className="my-xl" fullWidth variant="filled" color="orange">Log in</Button>
+
+    <div className="text-sm flex justify-center">Login with </div>
+    <span className="flex">
+      <div className="w-1/2 flex justify-end mx-sm"> Google</div>
+      <div className="w-1/2 mx-sm"> Facebook</div>
+    </span>
+
+    <div className="flex justify-center py-sm text-sm font-bold">
+      Dont have an account?
+      <span className="text-orange-500">Signup</span>
+    </div>
+    
 </form>
 </div>
 }

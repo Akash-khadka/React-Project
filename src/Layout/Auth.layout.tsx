@@ -6,6 +6,7 @@ import { SignupPage } from "../Pages/Auth/Signup"
 import { ForgotPassword } from "../Pages/Auth/ForgotPassword"
 import SignupImg from '../Images/Frame.png';
 import Logo from '../Images/exp.png'
+import { CreateProfile } from "../Pages/UserProfile/CreateProfile"
 
 export const AuthLayout = () => {
     return <>
