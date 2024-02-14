@@ -9,16 +9,21 @@ import '@mantine/dates/styles.css'
 import { BrowserRouter } from 'react-router-dom'
 import { AppRoutes } from './routes'
 import { MantineProvider } from '@mantine/core'
+import { Provider } from 'react-redux'
+import store from './Store/store'
 
 function App() {
 
   return (
 
+    <Provider store={store}>
       <BrowserRouter>
         <MantineProvider>
         <AppRoutes/>
         </MantineProvider>
       </BrowserRouter>
+    </Provider>
+      
   )
 }
 

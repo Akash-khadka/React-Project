@@ -19,13 +19,17 @@ export const ForgotPassword=()=>{
 
     }
 
-return <div className="px-lg flex items-center h-full">
+return <div className="px-lg flex h-full">
 <form className="w-full flex-col justify-between" onSubmit={form.onSubmit((values)=> submitForm())}>
-    <div className="text-3xl mb-xl font-bold">Forgot Password</div>
-    <div className="">
-    <TextInput placeholder="Email" label="Email" {...form.getInputProps('email')}  />
+    <div className="h-1/2">
+          <div className="text-3xl  font-extrabold	">Forgot Password</div>
+          <TextInput className="py-sm" placeholder="Email" label="" {...form.getInputProps('email')}  />
+          
     </div>
-    <Button fullWidth variant="outline" color="rgba(0, 0, 0, 1)">Send Verification</Button>
+    <div>
+          <Button className="my-xl" fullWidth variant="filled" color="orange">Send Verification</Button>
+    </div>
+    
 </form>
 </div>
 }

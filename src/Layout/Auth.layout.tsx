@@ -13,7 +13,7 @@ export const AuthLayout = () => {
         <nav className="fixed top-none left-0 w-full">
             <img className="h-[60px] px-xl" src={Logo}/>
         </nav>
-        <Grid className="auth-grid w-full h-full" style={{height: '100vh'}}>
+        <Grid className="auth-grid w-full" style={{height: 'calc(100vh - 80px'}}>
             <Grid.Col span={6} className="bg-white flex justify-center items-center">
                 <img className="h-[400px]" src={SignupImg}/>
             </Grid.Col>

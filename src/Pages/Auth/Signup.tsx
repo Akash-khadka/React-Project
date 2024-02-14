@@ -1,5 +1,6 @@
 import { TextInput, Button,PasswordInput } from "@mantine/core"
 import {useForm} from '@mantine/form';
+import { NavLink } from "react-router-dom";
 
 
 
@@ -36,8 +37,10 @@ return <div className="px-lg flex items-center h-full">
     </span>
 
     <div className="flex justify-center py-sm text-sm font-bold">
-      Dont have an account?
-      <span className="text-orange-500">Signup</span>
+      Already have an account?
+      <NavLink className="no-underline" to="/auth">
+      <span className="text-orange-500">Login</span>
+      </NavLink>
     </div>
 </form>
 </div>

@@ -45,3 +45,9 @@
 .auth-grid .mantine-Grid-inner{
   height:100%;
 }
+
+.mantine-Grid-inner{
+  max-width: 100% !important;
+  margin: 0 !important;
+  height: 100%;
+}
