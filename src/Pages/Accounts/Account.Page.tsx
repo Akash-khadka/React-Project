@@ -1,5 +1,6 @@
 import { Children } from "react"
 import { BANK_LIST } from "../../Temp/Bank.list"
+import { getImageLink } from "../../utils/helper/imageUrlHandler"
 
 export const AccountPage=()=>{
     return <section className="px-sm py-sm">

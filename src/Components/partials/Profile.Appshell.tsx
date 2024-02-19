@@ -7,11 +7,13 @@ import {AppshellMainprofile } from './AppShell.Main';
 import { Route, Routes } from 'react-router';
 import { DashboardHomePage } from '../../Pages/Dashboard/Home.Page';
 import { AccountPage } from '../../Pages/Accounts/Account.Page';
+import { DashboardMenu } from '../../Temp/DashboardMenu';
 
 export const DashboardAppShell=()=> {
   const [opened, { toggle }] = useDisclosure();
 
-  return (
+  return <>
+  
     <AppShell
       layout="alt"
       header={{ height: 60 }}
@@ -26,11 +28,23 @@ export const DashboardAppShell=()=> {
           <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
           <img src={Logo}/>
         </Group>
-        {Array(15)
+        
+       <div className='py-xl'>
+        {DashboardMenu.map((item, index) => (
+                <div className="font-bold " key={index}>
+                  <img src={item.icon}>
+                  </img>
+                  </div>
+        ))}
+        </div> 
+        
+         {/* {Array(15)
           .fill(0)
           .map((_, index) => (
-            <Skeleton key={index} h={28} mt="sm" animate={false} />
-          ))}
+            <Skeleton key={index} h={28} mt="sm" animate={false}>
+
+              </Skeleton>
+          ))}  */}
       </AppShell.Navbar>
       <AppShell.Main>
         <Routes>
@@ -40,4 +54,5 @@ export const DashboardAppShell=()=> {
         </Routes>
       </AppShell.Main>
     </AppShell>
-  )}
+  </>
+}

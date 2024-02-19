@@ -1,7 +1,8 @@
 import { TextInput, Button,PasswordInput } from "@mantine/core"
 import {useForm} from '@mantine/form';
 import { NavLink } from "react-router-dom";
-
+import Google from "../../Images/google.png"
+import Facebook from "../../Images/facebook.png"
 
 
 export const SignupPage=()=>{
@@ -25,15 +26,19 @@ return <div className="px-lg flex items-center h-full">
 <form className="w-full" onSubmit={form.onSubmit((values)=> submitForm())}>
     <div className="text-3xl mb-xl font-bold">Create an account</div>
     <div className="">
-    <TextInput placeholder="Email" label="Email" {...form.getInputProps('email')}  />
-    <PasswordInput placeholder="Password" label="Password" mt="sm" required {...form.getInputProps('password')} />
+    <TextInput placeholder="Email" label="" {...form.getInputProps('email')}  />
+    <PasswordInput placeholder="Password" label="" mt="sm" required {...form.getInputProps('password')} />
     </div>
     <Button  className="my-xl" fullWidth variant="filled" color="orange">Sign up</Button>
 
     <div className="text-sm flex justify-center font-semibold">Signup with</div>
-    <span className="flex">
-      <div className="w-1/2 flex justify-end mx-sm"> Google</div>
-      <div className="w-1/2 mx-sm"> Facebook</div>
+    <span className="flex justify-center">
+      <div className="px-sm">
+        <img src={Google}/>
+      </div>
+      <div className="px-sm">
+          <img src={Facebook}/>
+      </div>
     </span>
 
     <div className="flex justify-center py-sm text-sm font-bold">

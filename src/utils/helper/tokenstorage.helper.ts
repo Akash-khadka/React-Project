@@ -1,13 +1,13 @@
 
 export const saveToken = (val: string | null) => {
     if (val) {
-        localStorage.setItem('token', val)
+        localStorage.setItem('accessToken', val)
     }
 }
 export const getToken = () =>
-    localStorage.getItem('token') ? localStorage.getItem('token') : null
+    localStorage.getItem('accessToken') ? localStorage.getItem('accessToken') : null
 export const clearStorage = () => localStorage.clear()
-export const removeToken = () => localStorage.removeItem('token')
+export const removeToken = () => localStorage.removeItem('accessToken')
 
 export const saveUser = (val: string) =>
     localStorage.setItem('user', JSON.stringify(val))

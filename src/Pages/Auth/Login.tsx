@@ -3,6 +3,8 @@ import { useForm } from '@mantine/form';
 import { NavLink } from "react-router-dom";
 import { authenticateUser } from "../../Store/modules/auth/action";
 import { useDispatch } from "react-redux";
+import Google from "../../Images/google.png"
+import Facebook from "../../Images/facebook.png"
 
 export const LoginPage = () => {
 
@@ -38,11 +40,14 @@ export const LoginPage = () => {
       <Button className="my-xl" type="submit" fullWidth variant="filled" color="orange">Log in</Button>
 
       <div className="text-sm flex justify-center">Login with </div>
-      <span className="flex">
-        <div className="w-1/2 flex justify-end mx-sm"> Google</div>
-        <div className="w-1/2 mx-sm"> Facebook</div>
-      </span>
-
+      <span className="flex justify-center">
+      <div className="px-sm">
+        <img src={Google}/>
+      </div>
+      <div className="px-sm">
+          <img src={Facebook}/>
+      </div>
+    </span>
       <div className="flex justify-center py-sm text-sm font-bold">
         Dont have an account?
         <NavLink className="no-underline" to="/auth/signup">

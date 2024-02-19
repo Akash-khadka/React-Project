@@ -2,6 +2,7 @@ import GIBL from "../Images/GIBL.png"
 import NIBL from "../Images/NIBL.png"
 import Esewa from "../Images/esewa.png"
 import Khalti from "../Images/khalti.png"
+import { getImageLink } from "../utils/helper/imageUrlHandler"
 import { IBank } from "./IBank"
 
 
