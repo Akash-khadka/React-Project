@@ -37,7 +37,7 @@ export const authenticateUser = (data: { email: string, password: string }) => a
         password: data.password,
     });
     if (res.statusCode === 201) {
-        dispatch(setUser(res.data.user[0]));
+        dispatch(setUser(res.data.user));
         dispatch(setAccessToken(res.data.accessToken));
         localStorage.setItem('accessToken', res.data.accessToken);
         setAuthorizationToken(res.data.accessToken);

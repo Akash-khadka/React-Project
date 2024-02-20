@@ -9,9 +9,9 @@ const baseAxios: AxiosInstance = axios.create()
 
 baseAxios.defaults.baseURL = "https://expense.krafters.dev/";
 
-// if (isAuthenticated()) {
-//     baseAxios.defaults.headers.common.Authorization = `Bearer ${getToken()}`
-// }
+if (isAuthenticated()) {
+    baseAxios.defaults.headers.common.Authorization = `Bearer ${getToken()}`
+}
 
 // Add a request interceptor
 baseAxios.interceptors.request.use(

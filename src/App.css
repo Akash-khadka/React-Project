@@ -51,3 +51,16 @@
   margin: 0 !important;
   height: 100%;
 }
+
+.dashboard{
+  .nav-item.active{
+    /* &.active{ */
+      background:coral;
+      color:white;
+    /* } */
+  }
+}
+
+.mantine-Modal-inner{
+  left:0;
+}

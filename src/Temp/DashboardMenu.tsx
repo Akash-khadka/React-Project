@@ -1,28 +1,34 @@
 import { IDashboardMenu } from "./IDashboard.menu"
 import DashIcon from "../Images/dashmenuicon.png"
 import { getImageUrl } from "../utils/helper/imageUrlHandler"
+import { DeviceComputerCamera, File, GridDots, MoodAngry, Users } from "tabler-icons-react"
 
 export const DashboardMenu:  IDashboardMenu[]=[
 
     {
-        icon: DashIcon,
-        name:"Dashboard"
+        icon: <GridDots/>,
+        name:"Dashboard",
+        link: '/'
     },
     {
-        icon: DashIcon,
-        name:"Users"
+        icon: <Users/>,
+        name:"Users",
+        link: '/users'
     },
     {
-        icon: DashIcon,
-        name:"Web Details"
+        icon: <DeviceComputerCamera/>,
+        name:"Web Details",
+        link: 'web'
     },
     {
-        icon: DashIcon,
-        name:"Complaints"
+        icon:<MoodAngry/>,
+        name:"Complaints",
+        link: '/complaints'
     },
     {
-        icon: DashIcon,
-        name:"Queries"
+        icon:  <File/>,
+        name:"Accounts",
+        link: '/accounts'
     }
 ]
 

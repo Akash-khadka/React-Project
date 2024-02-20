@@ -1,4 +1,5 @@
 export interface IDashboardMenu{
     icon: any;
-    name: string
+    name: string;
+    link:string;
 }

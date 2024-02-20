@@ -1,13 +1,14 @@
+import { getToken } from "../../../utils/helper/tokenstorage.helper"
 import { LOGOUT_USER, SET_TOKEN, SET_USER } from "./actionTypes"
 
 interface IAuthenticationState {
     user: any,
-    accessToken: string
+    accessToken: string | null
 }
 
 const initialState: IAuthenticationState = {
     user: {},
-    accessToken: ''
+    accessToken: getToken()
 }
 
 export const authReducer = (state = initialState, action: any) => {

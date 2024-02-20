@@ -1,4 +1,4 @@
-import { AppShell, Burger } from '@mantine/core';
+import { AppShell, Burger, Tooltip } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { Group, Skeleton, Text } from '@mantine/core';
 import { ProfileNav } from './ProfileNav';
@@ -8,6 +8,7 @@ import { Route, Routes } from 'react-router';
 import { DashboardHomePage } from '../../Pages/Dashboard/Home.Page';
 import { AccountPage } from '../../Pages/Accounts/Account.Page';
 import { DashboardMenu } from '../../Temp/DashboardMenu';
+import { NavLink } from 'react-router-dom';
 
 export const DashboardAppShell=()=> {
   const [opened, { toggle }] = useDisclosure();
@@ -16,9 +17,10 @@ export const DashboardAppShell=()=> {
   
     <AppShell
       layout="alt"
-      header={{ height: 60 }}
+      header={{ height: 80 }}
       navbar={{ width: 120, breakpoint: 'sm', collapsed: { mobile: !opened } }}
       padding="md"
+      className='dashboard'
     >
       <AppShell.Header>
         <ProfileNav/>
@@ -29,12 +31,13 @@ export const DashboardAppShell=()=> {
           <img src={Logo}/>
         </Group>
         
-       <div className='py-xl'>
+       <div className='py-xl w-full flex flex-col items-center'>
         {DashboardMenu.map((item, index) => (
-                <div className="font-bold " key={index}>
-                  <img src={item.icon}>
-                  </img>
+                <NavLink to={item.link} className="nav-item font-bold h-[50px] w-[50px] rounded-sm hover:bg-gray-100 flex items-center justify-center" key={index}>
+                  <div>
+                  <Tooltip label={item.name}>{item.icon}</Tooltip>
                   </div>
+                </NavLink>
         ))}
         </div> 
         

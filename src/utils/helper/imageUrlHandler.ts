@@ -1,5 +1,5 @@
 
-import placeholderImg from '../../assets/images/placeholder.jpg'
+import placeholderImg from '../../Images/logo.png'
 import { IMAGE_URL } from "../../config/baseUrls"
 
 export const getImageUrl = (img: string) => {
